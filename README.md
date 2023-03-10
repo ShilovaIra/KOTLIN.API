@@ -9,10 +9,15 @@ KOTLIN.API is an application that allows user to trigger free and open-source AP
 ### This open API: 
 - provides public information on breweries, cideries, brewpubs, and bottleshops 🍺
 - allows to get data in different ways:
-        - by single data
-        - by lists
-        - by random data 
-        - by applying variety filters
+
+        by single data
+	
+        by lists
+	
+        by random data 
+	
+        by applying variety filters
+	
 
 ### Techs
 - [Kotlin](https://kotlinlang.org/) - lang for Android app creation
