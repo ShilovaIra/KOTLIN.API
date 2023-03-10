@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">app1</string>
+    <string name="please_enter_login_and_password">Please, enter login and password</string>
+    <string name="Login">Login</string>
+    <string name="Password">Password</string>
+    <string name="login_button">Login</string>
+    <string name="select_brew">select your brewerie</string>
+    <string name="Name">Name</string>
+    <string name="type">Type</string>
+    <string name="street">Street</string>
+    <string name="website">Website</string>
+    <string name="phone">Phone</string>
+    <string name="state">State</string>
+    <string name="city">City</string>
+</resources>
