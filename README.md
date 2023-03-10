@@ -26,3 +26,6 @@ KOTLIN.API is an application that allows user to trigger free and open-source AP
 ### Getting Started 🩼
 
 git clone git@github.com:ShilovaIra/KOTLIN.API.git
+
+
+![diagram](https://user-images.githubusercontent.com/52717228/224413417-cbd57218-2971-4d42-9870-43caa7290097.png)
