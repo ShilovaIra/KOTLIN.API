@@ -1,4 +1,4 @@
-package com.androidlab.app1.services
+package com.androidlab.app1.controllers
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

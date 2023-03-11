@@ -6,16 +6,21 @@ import android.os.Bundle
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.androidlab.app1.Constants.Constants
 import com.androidlab.app1.Constants.Constants.Companion.NO_WEBSITE
 import com.androidlab.app1.R
 import com.androidlab.app1.models.Brewery
-import com.androidlab.app1.services.BreweryService
-import com.androidlab.app1.services.RetrofitClientInstance.retrofitInstance
+import com.androidlab.app1.controllers.BreweryController
+import com.androidlab.app1.controllers.RetrofitClientInstance.retrofitInstance
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 class AboutBreweryActivity : AppCompatActivity() {
+
+    private val service: BreweryController = retrofitInstance!!.create(
+        BreweryController::class.java
+    )
 
     private var brewName: TextView? = null
     private var brewStreet: TextView? = null
@@ -41,9 +46,6 @@ class AboutBreweryActivity : AppCompatActivity() {
         brewCity = findViewById(R.id.city)
         brewState = findViewById(R.id.state)
 
-        val service = retrofitInstance!!.create(
-            BreweryService::class.java
-        )
         val secondCall: Call<Brewery?>? = service.getBreweryById(name)
         secondCall?.enqueue(object : Callback<Brewery?> {
             override fun onResponse(call: Call<Brewery?>, response: Response<Brewery?> ) {
@@ -65,7 +67,7 @@ class AboutBreweryActivity : AppCompatActivity() {
             override fun onFailure(call: Call<Brewery?>, t: Throwable) {
                 Toast.makeText(
                     this@AboutBreweryActivity,
-                    "Something went wrong... Please try later!",
+                    Constants.UNABLE_TO_FIND_BREW_BY_ID,
                     Toast.LENGTH_SHORT
                 ).show()
             }
